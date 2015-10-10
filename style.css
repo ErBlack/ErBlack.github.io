@@ -10,6 +10,10 @@ html,body {
     font-size: 125%;
 }
 
+h1 {
+    text-align: center;
+}
+
 h2 {
     padding-bottom: .1em;
     border-bottom: dotted 1px rgba(255,255,255,.3);
@@ -67,7 +71,7 @@ a:not(:hover) .icon {
     width: 800px;
     height: 500px;
     max-width: 100%;
-    margin: 20px 0;
+    margin: 20px auto;
 }
 
 li {

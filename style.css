@@ -1,4 +1,75 @@
 html,body {
     min-height: 100vh;
     background: #262833;
+    color: #fff;
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    display: flex;
+    display: webkit-lfex;
+    justify-content: center;
+    align-items: center;
+    font-size: 125%;
+}
+
+h2 {
+    padding-bottom: .1em;
+    border-bottom: dotted 1px rgba(255,255,255,.3);
+}
+
+a {
+    color: #2980b9;
+    transition: color .3s ease;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #3498db;
+}
+
+.layout {
+    padding: 50px;
+}
+
+.icon {
+    border-radius: .2em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background: transparent no-repeat center center;
+    vertical-align: bottom;
+    background-size: 100%;
+    transition: opacity .3s ease, transform .3s ease;
+    opacity: 1;
+    transform: rotate(0deg);
+    margin-bottom: .1em;
+}
+
+a:not(:hover) .icon {
+    opacity: .8;
+    transform: rotate(360deg);
+}
+
+.icon_present { background-image: url(i/present.svg); }
+.icon_cake { background-image: url(i/cake.svg); }
+.icon_map { background-image: url(i/map.svg); }
+.icon_pick { background-image: url(i/pick.svg); }
+.icon_pack { background-image: url(i/pack.svg); }
+.icon_beer { background-image: url(i/beer.svg); }
+.icon_pizza { background-image: url(i/pizza.svg); }
+.icon_burger { background-image: url(i/burger.svg); }
+.icon_dice { background-image: url(i/dice.svg); }
+.icon_metal { background-image: url(i/metal.svg); }
+.icon_game { background-image: url(i/game.svg); }
+.icon_smoke { background-image: url(i/smoke.svg); }
+.icon_steam { background-image: url(i/steam.png); }
+.icon_raindrop { background-image: url(i/raindrop.png); }
+
+#map {
+    width: 800px;
+    height: 500px;
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+li {
+    font-size: 150%;
 }

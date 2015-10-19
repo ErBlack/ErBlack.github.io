@@ -1,5 +1,5 @@
 function initDate() {
-    var start = new Date('2015-10-17T15:00:00.000Z');
+    var start = new Date('2016-10-17T15:00:00.000Z');
     var elem = document.querySelector('#date');
     var timeout;
     
@@ -44,6 +44,9 @@ function initDate() {
         var offset = start.offset();
         var result = ['Осталось'];
         
+        if (offset.weeks) {
+            result.push(offset.weeks + ' ' + plural(offset.weeks, ['неделя', 'недели', 'недель']));
+        }        
         if (offset.days) {
             result.push(offset.days + ' ' + plural(offset.days, ['день', 'дня', 'дней']));
         }

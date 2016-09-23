@@ -1,5 +1,5 @@
 function initDate() {
-    var start = new Date('2016-10-17T15:00:00.000Z');
+    var start = new Date('2016-10-22T15:00:00.000Z');
     var elem = document.querySelector('#date');
     var timeout;
     

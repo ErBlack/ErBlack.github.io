@@ -1,15 +1,15 @@
-html,body {
+:root {
     min-height: 100vh;
-    background: #34495e;
+    background: #262833;
     color: #fff;
     font-family: 'Roboto Condensed', Arial, sans-serif;
     display: flex;
     display: webkit-lfex;
     justify-content: center;
-    align-items: center;
-    font-size: 24px;
+    font-size: 32px;
     padding: 0;
     margin: 0;
+    text-shadow: 0 0 3px rgba(0,0,0,.5);
 }
 
 h1 {
@@ -33,7 +33,6 @@ a:hover {
 
 .layout {
     padding: 50px;
-    background: #262833;
 }
 
 .icon {
@@ -85,10 +84,36 @@ ul, li {
 
 li {
     list-style: none;
-    font-size: 28px;
 }
 
 .date {
     font-size: 34px;
     text-align: center;
+}
+
+.whish
+{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.whish li
+{
+    margin: 0 20px;
+    font-size: 128px;
+}
+
+body:after
+{
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: radial-gradient(rgba(0,0,0,.2), rgba(0,0,0,.1)), linear-gradient(to top, rgba(0,0,0,.2), rgba(0,0,0,.1), rgba(0,0,0,.2));
+    z-index: -1;
+    background-size: 100% 200%, 100%;
 }

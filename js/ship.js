@@ -4,22 +4,35 @@ module.exports = class Ship {
     constructor(elem) {
         this._elem = elem;
 
-        this._onMouseDown = this._onMouseDown.bind(this);
-        this._onMouseUp = this._onMouseUp.bind(this);
+        this._onClick = this._onClick.bind(this);
 
-        this._elem.addEventListener('mousedown', this._onMouseDown);
-        this._elem.addEventListener('mouseup', this._onMouseDown);
+        this._elem.addEventListener('click', this._onClick);
     }
 
-    _onMouseDown() {
-        clearTimeout(this._timer);
+    get _counter() {
+        return Number(this._elem.dataset.counter);
+    }
 
-        this._timer = setTimeout(function() {
+    set _counter(value) {
+        this._elem.dataset.counter = value;
+    }
+
+    _onClick(e) {
+        e.preventDefault();
+        e.stopImmediatePropagation();
+
+        this._counter += 1;
+
+        clearTimeout(this._timeout);
+
+        if (this._counter === 28) {
             document.body.classList.add('hyperspace');
-        }, 16000);
-    }
-
-    _onMouseUp() {
-        clearTimeout(this._timer);
+        
+            this._counter = 0;
+        } else {
+            this._timeout = setTimeout(function() {
+                this._counter = 0;
+            }.bind(this), 10000);
+        }
     }
 };

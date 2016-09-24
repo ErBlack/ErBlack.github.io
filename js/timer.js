@@ -59,7 +59,7 @@ module.exports = class Timer {
         from = from || new Date();
 
         let offset = (this._date - from);
-        let direction = Math.sign(offset);
+        let direction = offset > 0 ? 1 : offset < 0 ? -1 : 0;
         
         offset = Math.abs(offset);
 
@@ -82,46 +82,3 @@ module.exports = class Timer {
         };
     }
 }
-
-
-function initDate() {
-    var start = new Date('2016-10-22T15:00:00.000Z');
-    var elem = document.querySelector('#date');
-    var timeout;
-
-    function pluralForm(n, f) { n %= 100; if (n > 10 && n < 20) return f[2]; n %= 10; return f[n > 1 && n < 5 ? 1 : n == 1 ? 0 : 2] }
-
-
-
-    function iterate() {
-        var offset = start.offset();
-        var result = ['Осталось'];
-
-        if (offset.weeks) {
-            result.push(offset.weeks + ' ' + pluralForm(offset.weeks, ['неделя', 'недели', 'недель']));
-        }
-        if (offset.days) {
-            result.push(offset.days + ' ' + pluralForm(offset.days, ['день', 'дня', 'дней']));
-        }
-        if (offset.hours) {
-            result.push(offset.hours + ' ' + pluralForm(offset.hours, ['час', 'часа', 'часов']));
-        }
-        if (offset.minutes) {
-            result.push(offset.minutes + ' ' + pluralForm(offset.minutes, ['минута', 'минуты', 'минут']));
-        }
-        if (offset.seconds) {
-            result.push(offset.seconds + ' ' + pluralForm(offset.seconds, ['секунда', 'секунды', 'секунд']));
-        }
-
-        elem.innerHTML = result.join(' ');
-
-        offset--;
-        timeout = setTimeout(iterate, 1000);
-    }
-
-    if (start.offset().direction < 0) {
-        iterate();
-    }
-}
-
-

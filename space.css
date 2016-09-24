@@ -37,9 +37,28 @@
     will-change: transform;
 }
 
-.ship:active
+.ship:after
 {
-    animation: shipPreJump 16s ease-out;
+    content: attr(data-counter);
+    position: absolute;
+    font-family: monospace;
+    left: 37px;
+    color: rgba(141,141,141,.4);
+    top: 96px;
+    font-size: 15px;
+    letter-spacing: 13px;
+    text-shadow: 1px 1px 0px rgba(0,0,0,.4);
+    animation: blink 2s infinite ease;
+}
+
+@keyframes blink
+{
+    90% {
+        color: rgba(141,141,141,.4);
+    }
+    95% {
+        color: #fff;
+    }
 }
 
 @keyframes shipFloatX
@@ -87,15 +106,6 @@
     100%
     {
         margin-top: 0;
-    }
-}
-
-@keyframes shipPreJump
-{
-    100%
-    {
-        transform: scale(.9) translate(-30px);
-        margin: 0;
     }
 }
 

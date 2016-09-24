@@ -1,8 +1,5 @@
 :root
 {
-    font-family: 'Roboto Condensed', Arial, sans-serif;
-    font-size: 32px;
-
     display: flex;
 
     min-height: 100vh;
@@ -12,6 +9,9 @@
     color: #fff;
     background: #262833;
     text-shadow: 0 0 3px rgba(0,0,0,.5);
+
+    font-family: 'Roboto Condensed', Arial, sans-serif;
+    font-size: 32px;
 
     justify-content: center;
 }
@@ -77,7 +77,7 @@ a:not(:hover) .icon
     opacity: .8;
 }
 
-.icon_present
+/*.icon_present
 {
     background-image: url(i/present.svg);
 }
@@ -124,7 +124,7 @@ a:not(:hover) .icon
 .icon_smoke
 {
     background-image: url(i/smoke.svg);
-}
+}*/
 .icon_steam
 {
     background-image: url(i/steam.png);
@@ -160,23 +160,21 @@ li
 
 .date
 {
-    font-size: 34px;
-
     text-align: center;
+
+    font-size: 34px;
 }
 
 .whish
 {
-    display: -webkit-flex;
-    display:         flex;
+    display: flex;
 
-    -webkit-justify-content: center;
-            justify-content: center;
+    justify-content: center;
 }
 
 .whish li
 {
-    font-size: 128px;
-
     margin: 0 20px;
+
+    font-size: 128px;
 }

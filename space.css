@@ -16,8 +16,7 @@
     left: 50%;
 
     width: 0;
-    height: calc(25vh + 216px / 2);
-    min-height: 239px;
+    height: 270px;
 }
 
 .ship

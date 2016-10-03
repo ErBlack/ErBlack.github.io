@@ -51,7 +51,9 @@
 	var onDomReady = __webpack_require__(8);
 
 	__webpack_require__(9);
-	__webpack_require__(14);
+
+	__webpack_require__(10);
+	__webpack_require__(15);
 
 	onDomReady(function () {
 	    var start = new Date('2016-10-22T15:00:00.000Z');
@@ -277,14 +279,42 @@
 /* 9 */
 /***/ function(module, exports) {
 
+	'use strict';
+
+	var X = 59.940448;
+	var Y = 30.29145;
+
+	ymaps.ready(function () {
+	    var map = new ymaps.Map('map', {
+	        center: [X, Y],
+	        zoom: 15,
+	        controls: ['zoomControl', 'typeSelector']
+	    });
+
+	    map.geoObjects.add(new ymaps.GeoObject({
+	        geometry: {
+	            type: "Point",
+	            coordinates: [X, Y]
+	        },
+	        properties: {
+	            iconContent: 'Свободное время',
+	            hintContent: 'Начало в 18:00'
+	        }
+	    }, { preset: 'islands#redStretchyIcon' }));
+	});
+
+/***/ },
+/* 10 */
+/***/ function(module, exports) {
+
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 10 */,
 /* 11 */,
 /* 12 */,
 /* 13 */,
-/* 14 */
+/* 14 */,
+/* 15 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

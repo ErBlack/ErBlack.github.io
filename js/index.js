@@ -2,6 +2,8 @@ const Timer = require('./timer');
 const Ship = require('./ship');
 const onDomReady = require('./ondomready'); 
 
+require('./map');
+
 require('../style.css');
 require('../space.css');
 

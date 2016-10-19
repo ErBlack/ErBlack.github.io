@@ -53,7 +53,7 @@
 	__webpack_require__(9);
 
 	__webpack_require__(10);
-	__webpack_require__(15);
+	__webpack_require__(16);
 
 	onDomReady(function () {
 	    var start = new Date('2016-10-22T15:00:00.000Z');
@@ -314,7 +314,8 @@
 /* 12 */,
 /* 13 */,
 /* 14 */,
-/* 15 */
+/* 15 */,
+/* 16 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

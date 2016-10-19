@@ -139,13 +139,27 @@ a:not(:hover) .icon
     background-image: url(i/clock.svg);
 }
 
+.icon_place
+{
+    background-image: url(http://anticafespb.ru/i/logo.png);
+}
+
+.icon_vk
+{
+    background-image: url(i/vk.png);
+}
+
 #map
 {
-    width: 800px;
-    max-width: 100%;
     height: 500px;
-    margin: 20px auto;
     background-color: #fafafa;
+}
+
+.mapper
+{
+    width: 800px;
+    max-width: calc(100vw - 20px);
+    margin: 20px auto;
 }
 
 ul,
@@ -178,4 +192,60 @@ li
     margin: 0 20px;
 
     font-size: 128px;
+}
+
+.info
+{
+    font-size: 30px;
+}
+
+.mapper > .info
+{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    margin: 0;
+    z-index: 1;
+}
+
+.schedule
+{
+    counter-reset: schedule-item;
+    width: 800px;
+    max-width: calc(100vw - 40px);
+    margin: 0 auto;
+}
+
+.schedule dl
+{
+    counter-increment: schedule-item;
+    display: flex;
+}
+
+.schedule dt
+{
+    flex-shrink: 0;
+}
+
+.schedule dt:before
+{
+    content: counter(schedule-item) '. ';
+}
+
+.schedule dd
+{
+    flex-grow: 1;
+    display: flex;
+    margin: 0;
+}
+
+.schedule dd:before
+{
+    content: '';
+    display: block;
+    flex-grow: 1;
+    border-bottom: 1px dotted #fff;
+    margin: 0 5px;
+    position: relative;
+    top: -3px;
 }

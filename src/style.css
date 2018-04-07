@@ -1,0 +1,52 @@
+body
+{
+    width: 100vw;
+    min-width: 50vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    color: #fff;
+    background-color:#080b06;
+    background-image: url(img/room.jpg);
+    background-size: cover;
+
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.userpic
+{
+    position: absolute;
+    top: 15vh;
+    right: 0;
+    left: 0;
+
+    width: 45vh;
+    height: 45vh;
+    margin: auto;
+
+    border-radius: 100%;
+    background-color: #080b06;
+    box-shadow: 0 0 60px rgba(0,0,0,.5);
+}
+
+.name
+{
+    position: absolute;
+    top: calc(60vh + 50px);
+    right: 0;
+    left: 0;
+
+    margin: auto;
+
+    text-align: center;
+
+        text-shadow: 0 0 0.2em  rgba(0,0,0,.5);
+
+    font-size: 56px;
+}
+
+.fullname, .username
+{
+    display: inline-block;
+}

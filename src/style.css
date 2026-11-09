@@ -8,12 +8,19 @@ body {
   color: white;
   background-color: #080b06;
   background-image: url(img/room.jpg);
+  background-image: image-set(
+    url(img/room.avif) type("image/avif"),
+    url(img/room.jpg) type("image/jpeg")
+  );
   background-size: cover;
 
   font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
 }
 
 #userpic {
+  --shadow-blur: 60px;
+  --shadow-alpha: 0.5;
+
   position: absolute;
   top: 15vh;
   right: 0;
@@ -25,7 +32,13 @@ body {
 
   border-radius: 100%;
   background-color: #080b06;
-  box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 var(--shadow-blur) rgba(0, 0, 0, var(--shadow-alpha));
+}
+
+.glitch {
+  position: fixed;
+
+  pointer-events: none;
 }
 
 .info {

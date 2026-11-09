@@ -8,29 +8,25 @@
       sizes="120x120"
       rel="icon"
       href="/src/img/ErBlack120.jpg"
-      type="image/jpg"
+      type="image/jpeg"
    >
     <link rel="stylesheet" href="src/style.css">
-    <meta name="description" content="ErBlack">
+    <script type="module" src="src/glitch.js"></script>
+    <meta name="description" content="Developer who sketches">
     <meta property="og:title" content="ErBlack">
-    <meta property="og:description" content="ErBlack">
-    <link rel="prefetch" href="src/img/Artem.jpg">
-    <link rel="prefetch" href="src/img/ErBlack.jpg">
+    <meta property="og:description" content="Developer who sketches">
+    <meta property="og:image" content="https://erblack.me/src/img/og.jpg">
+    <link rel="prefetch" href="src/img/Artem.avif" data-alt="Artem's photo">
+    <link rel="prefetch" href="src/img/ErBlack.avif" data-alt="ErBlack's avatar">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=fallback" rel="stylesheet">
   </head>
 
   <body>
-    <img id="userpic" src="src/img/Artem.jpg" alt="ErBlack's user picture">
+    <img id="userpic" src="src/img/Artem.avif" alt="ErBlack's user picture">
     <script>
-      Object.assign(
-          window.userpic,
-          [
-              {src: 'src/img/Artem.jpg', alt: "Artem"},
-              {src: 'src/img/ErBlack.jpg', alt: "ErBlack"}
-          ][Date.now() % 2]
-      );
+      ({href: window.userpic.src, dataset: {alt: window.userpic.alt}} = document.querySelectorAll('link[data-alt]')[Date.now() % 2]);
       document.currentScript.remove();
     </script>
     <main class="info">

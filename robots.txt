@@ -1,2 +1,3 @@
 User-agent: *
 Sitemap: https://erblack.me/sitemap.xml
+Sitemap: https://erblack.me/blog/sitemap.xml
